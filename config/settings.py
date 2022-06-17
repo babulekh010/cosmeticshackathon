@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     "corsheaders",
 
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
 
 ]
 
@@ -67,6 +67,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 MIDDLEWARE_CLASSES = (
     'corsheaders.middleware.CorsMiddleware',
