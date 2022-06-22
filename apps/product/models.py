@@ -8,7 +8,7 @@ class Product(models.Model):
     desc = models.TextField(blank=True, null=True)
     category = models.TextField(max_length=150, )
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='products/', blank=True, null=True)
+    image = models.ImageField(upload_to='products/', blank=True, null=True, max_length=1000)
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
