@@ -19,7 +19,7 @@ class ProductSerializer(serializers.ModelSerializer):
         representation['likes'] = instance.likes.all().count()
         representation['reviews'] = instance.reviews.all().count()
         if representation["image"] and "http" in representation['image']:
-            representation['image'] = representation["image"][representation["image"].index("https"):].replace("%3A", r":/")
+            representation['image'] = representation["image"][representation["image"].index("https://www.nyxcosmetic.ru"):].replace("%3A", r":/")
         return representation
 
 
